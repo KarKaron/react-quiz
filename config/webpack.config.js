@@ -121,6 +121,7 @@ module.exports = function(webpackEnv) {
           loader: require.resolve(preProcessor),
           options: {
             sourceMap: true,
+            
           },
         }
       );
@@ -432,6 +433,10 @@ module.exports = function(webpackEnv) {
               use: getStyleLoaders({
                 importLoaders: 1,
                 sourceMap: isEnvProduction && shouldUseSourceMap,
+                modules: {
+                  //getLocalIdent: getCSSModuleLocalIdent,
+                  localIdentName: '[name]__[local]--[hash:base64:5]',
+                },
               }),
               // Don't consider CSS imports dead code even if the
               // containing package claims to have no side effects.
@@ -447,7 +452,8 @@ module.exports = function(webpackEnv) {
                 importLoaders: 1,
                 sourceMap: isEnvProduction && shouldUseSourceMap,
                 modules: {
-                  getLocalIdent: getCSSModuleLocalIdent,
+                  //getLocalIdent: getCSSModuleLocalIdent,
+                  localIdentName: '[name]__[local]--[hash:base64:5]',
                 },
               }),
             },
@@ -461,6 +467,10 @@ module.exports = function(webpackEnv) {
                 {
                   importLoaders: 3,
                   sourceMap: isEnvProduction && shouldUseSourceMap,
+                  modules: {
+                    //getLocalIdent: getCSSModuleLocalIdent,
+                    localIdentName: '[name]__[local]--[hash:base64:5]',
+                  },
                 },
                 'sass-loader'
               ),
@@ -477,9 +487,10 @@ module.exports = function(webpackEnv) {
               use: getStyleLoaders(
                 {
                   importLoaders: 3,
-                  sourceMap: isEnvProduction && shouldUseSourceMap,
+                  sourceMap: isEnvProduction && shouldUseSourceMap,                  
                   modules: {
-                    getLocalIdent: getCSSModuleLocalIdent,
+                    //getLocalIdent: getCSSModuleLocalIdent,
+                    localIdentName: '[name]__[local]--[hash:base64:5]',
                   },
                 },
                 'sass-loader'
