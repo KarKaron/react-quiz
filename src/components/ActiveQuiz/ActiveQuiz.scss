@@ -1,6 +1,6 @@
 .ActiveQuiz {
   padding: 20px;
-  color: 000;
+  color: #000;
   border: 2px solid #2e2e2b;
   margin: 0 10px;
   border-radius: 5px;
@@ -11,4 +11,17 @@
 .Question {
   display: flex;
   justify-content: space-between;
+}
+
+.RetryButton {
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 7px;
+  border: none;
+  background: green;
+  color: #fff;
+  &:hover {
+    background: #fff;
+    color: #000;
+  }
 }

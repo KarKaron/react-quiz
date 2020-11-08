@@ -1,9 +1,9 @@
 .Quiz {
-  background: #e8deb4;
+  padding-top: 10x0px;
+  background: url('photo.jpg') center fixed;
   display: flex;
   justify-content: center;
   width: 100%;
-  padding-top: 100px;
   flex-grow: 1;
   //background: linear-gradient(90deg, #00f 0, #fc6 100%);
   /*@media (max-width: 600px) {
@@ -12,16 +12,20 @@
   }*/
 }
 
-.QuizWrapper {
-  width: 600px;
+.QuizWrapper {  
+  min-width: 600px;
+  background: #e8deb4;
+  border-radius: 10px;
+  padding: 10px 20px;
   
   h1 {
+    text-align: center;
     color: #5f5fef;
-    margin: 0 0 10px 10px;
+    margin: 20px 0;
   }
 
   h2 {
     color: #336633;
-    margin: 0 0 10px 10px;
+    margin: 0 0 10px 30px;
   }
 }

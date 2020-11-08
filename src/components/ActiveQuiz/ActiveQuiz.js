@@ -4,13 +4,13 @@ import AnswerList from '../AnswersList/AnswersList'
 
 const ActiveQuiz = props => (
   <div className={classes.ActiveQuiz}>
-    <p className={classes.Question}>
+    <h2 className={classes.Question}>
       <span>
         <strong>{props.activeNumber}.</strong>&nbsp;
         {props.question}
       </span>
       <small>{props.id} из {props.quizLength}</small>
-    </p>
+    </h2>
 
     <AnswerList 
       answers={props.answers}
